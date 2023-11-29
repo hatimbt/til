@@ -19,7 +19,7 @@ a backend component. Two frontends are supplied---a text-based frontend
 The latest documentation is available
 [[https://w1.fi/cgit/hostap/plain/wpa_supplicant/README][here]].
 
-The project source code is freely available. To clone the project
+The project source code is freely available. To clone the project:
 #+begin_src shell
 git clone git://w1.fi/hostap.git
 #+end_src
@@ -59,7 +59,26 @@ network={
 
 =wpa_supplicant= can be started quickly by using =wpa_passphrase=, as follows:
 #+begin_src shell
-wpa_supplicant -B -i interface -c <(wpa_passphrase MYSSID /passphrase/)
+wpa_supplicant -B -i interface -c <(wpa_passphrase <MYSSID> <passphrase>)
+#+end_src
+
+*WPA Enterprise:*
+In this example we connect to [[https://eduroam.org/][eduroam]]. Use the following minimal
+configuration:
+#+begin_src 
+network={
+    ssid="eduroam"
+    key_mgmt=WPA-EAP
+    eap=PEAP
+    identity="myemail@myuni.ac.uk"
+    password="passphrase"
+    phase2="auth=MSCHAPV2"
+}
+#+end_src
+
+After this run the following:
+#+begin_src shell
+wpa_supplicant -B -i <interface> -c /etc/wpa_supplicant/wpa_supplicant.conf
 #+end_src
 
 *References:*
