@@ -1,7 +1,7 @@
 #+title: Repository of useful stuff
 #+author: Hatim Thayyil
 
-Inspired by [[jbranchaud/til][https://github.com/jbranchaud/til]].
+Inspired by [[https://github.com/jbranchaud/til][jbranchaud/til]].
 
 * Networking
 
