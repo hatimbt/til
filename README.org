@@ -7,9 +7,9 @@ Inspired by [[jbranchaud/til][https://github.com/jbranchaud/til]].
 
 ** wpa_supplicant
 
-[[wpa_supplicant][https://w1.fi/wpa_supplicant/]] is a
-[[WPA][https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access]]
-[[supplicant][https://en.wikipedia.org/wiki/Supplicant_(computer)]] for
+[[https://w1.fi/wpa_supplicant/][wpa_supplicant]] is a
+[[https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access][WPA]]
+[[https://en.wikipedia.org/wiki/Supplicant_(computer)][supplicant]] for
 GNU/Linux, BSD, Mac OS X, and Windows with support for WPA, WPA2, and WPA3.
 
 The program =wpa_supplicant= is a daemon and runs in the background and acts as
@@ -17,7 +17,7 @@ a backend component. Two frontends are supplied---a text-based frontend
 =wpa_cli=, and a GUI frontend =wpa_gui=.
 
 The latest documentation is available
-[[here][https://w1.fi/cgit/hostap/plain/wpa_supplicant/README]].
+[[https://w1.fi/cgit/hostap/plain/wpa_supplicant/README][here]].
 
 The project source code is freely available. To clone the project
 #+begin_src shell
@@ -34,13 +34,16 @@ mapping is nevertheless not binding, as Annex J is informative in the latest
 802.11 standard. If ASCII characters are used, the 256-bit key is calculated by
 applying the PBKDF2 key derivation function to the passphrase, using the SSID
 as the salt and 4096 iterations of HMAC-SHA1. WPA-Personal mode is available on
-all three WPA versions. [[Source:
-Wikipedia][https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPA-TERMINOLOGY]].
+all three WPA
+versions. [[https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPA-TERMINOLOGY][Source:
+Wikipedia]].
 
 A separate tool, =wpa_passphrase=, can be used to generate 256-bit keys from
 an ASCII passphrase, and execute the above key derivation function.
 
-*Usage*: =wpa_supplicant= can be configured using a text file. See given example [[wpa_supplicant.conf][https://w1.fi/cgit/hostap/plain/wpa_supplicant/wpa_supplicant.conf]].
+*Usage*: =wpa_supplicant= can be configured using a text file. See given
+example
+[[https://w1.fi/cgit/hostap/plain/wpa_supplicant/wpa_supplicant.conf][wpa_supplicant.conf]].
 
 The =psk= attribute may be entered either as the generated 256-bit key
 represented as 64 hex-digits; or an an ASCII passphrase inside double quotation
@@ -60,8 +63,8 @@ wpa_supplicant -B -i interface -c <(wpa_passphrase MYSSID /passphrase/)
 #+end_src
 
 *References:*
-- [[Arch Wiki:wpa_supplicant][https://wiki.archlinux.org/title/wpa_supplicant]]
-- [[Arch Wiki:Network
-  configuration/Wireless][https://wiki.archlinux.org/title/Network_configuration/Wireless]]
-- [[Wireshark WPA-PSK Raw Key
-  Generator][https://www.wireshark.org/tools/wpa-psk.html]]
+- [[https://wiki.archlinux.org/title/wpa_supplicant][Arch Wiki:wpa_supplicant]]
+- [[https://wiki.archlinux.org/title/Network_configuration/Wireless][Arch
+  Wiki:Network configuration/Wireless]]
+- [[https://www.wireshark.org/tools/wpa-psk.html][Wireshark WPA-PSK Raw Key
+  Generator]]
